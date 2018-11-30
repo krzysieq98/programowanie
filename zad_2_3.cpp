@@ -6,9 +6,9 @@ using namespace std;
 
 void zad2_1()
 {
-    //2.1. ZapoznaÄ‡ siÄ™ z pÄ™tlÄ… while. PÄ™tla ta sÅ‚uÅ¼y do wielokrotnego wykonania fragmentu kodu przez NIEZNANÄ„ Z GÃ“RY iloÅ›Ä‡ razy. PÄ™tla
-    //wykonuje siÄ™ zawsze, jeÅ›li warunek jest prawdziwy (ewaluowany do true). NapisaÄ‡ pÄ™tlÄ™, w ktÃ³ej uÅ¼ytkownik podaje liczbÄ™ x. NaleÅ¼y
-    //wyÅ›wietliÄ‡ tÄ™ liczbÄ™. JeÅ¼eli uÅ¼ytkownik poda 0, naleÅ¼y zakoÅ„czyÄ‡ program.
+    //2.1. Zapoznaæ siê z pêtl¹ while. Pêtla ta s³u¿y do wielokrotnego wykonania fragmentu kodu przez NIEZNAN¥ Z GÓRY iloœæ razy. Pêtla
+    //wykonuje siê zawsze, jeœli warunek jest prawdziwy (ewaluowany do true). Napisaæ pêtlê, w któej u¿ytkownik podaje liczbê x. Nale¿y
+    //wyœwietliæ tê liczbê. Je¿eli u¿ytkownik poda 0, nale¿y zakoñczyæ program.
 	
 	cout<<endl<<"zad 2.1\n";
 
@@ -26,9 +26,79 @@ void zad2_1()
 	cout<<endl;
 }
 
+void zad2_2()
+{
+	/* 2.2. Przerobiæ kalkulator z zadania 1.6. Teraz po ka¿dym dzia³aniu program powinien spytaæ u¿ytkownika, czy ten chce powtórzyæ
+	wszystko od pocz¹tku. Jeœli tak - restartujemy kalkulator i zaczynamy od nowa. Jeœli nie - koñczymy program. */
+	
+	cout<<endl<<"zad 2.2\n";
+	
+	char reset;
+	
+	
+	do
+	{
+		int dzialanie=0;
+	        float x=0, y=0;
+	        cout << "Wybierz dzialanie  \n"
+	        <<"+==========================+\n"
+	        <<"+ 1. Dodawanie             +\n"
+	        <<"+ 2. Odejmowanie           +\n"
+	        <<"+ 3. Mnozenie              +\n"
+	        <<"+ 4. Dzielenie             +\n"
+	        <<"+ 5. Potegowanie           +\n"
+	        <<"+==========================+\n"
+	        <<"Twoj wybor:";
+	        cin >> dzialanie;
+	        
+	        cout << "Podaj dwie dowolne liczby: \n";
+	        cout << "x= "; cin >> x;
+	        cout << "y= "; cin >> y;
+	
+	        switch(dzialanie)
+	        {
+	        case 1:
+	        {
+	            cout << "x+y= "<<x+y<<endl;
+	            break;
+	        }
+	
+	        case 2:
+	        {
+	            cout << "x-y= "<<x-y<<endl;
+	            break;
+	        }
+	
+	        case 3:
+	        {
+	            cout << "x*y= "<<x*y<<endl;
+	            break;
+	        }
+	
+	        case 4:
+	        {
+	            cout << "x/y= "<<x/y<<endl;
+	            break;
+	        }
+	
+	        case 5:
+	        {
+	            cout << "x^y= "<<pow(x,y)<<endl;
+	            break;
+	        }
+	    }
+
+		
+		cout<<"Powtórzyæ dzia³anie kalkulatora (t/n):";
+		cin>>reset;
+	}
+	while(reset='t');
+}
+
+
 void zad2_3()
 {
-    //2.3. PobraÄ‡ od uÅ¼ytkownika liczbÄ™ x. NaleÅ¼y wyÅ›wietliÄ‡ wszystkie kolejne potÄ™gi liczby x. ZakoÅ„czyÄ‡ program, kiedy liczba przekroczy 100000.
+    //2.3. Pobraæ od u¿ytkownika liczbê x. Nale¿y wyœwietliæ wszystkie kolejne potêgi liczby x. Zakoñczyæ program, kiedy liczba przekroczy 100000.
 	
 	cout<<endl<<"zad 2.3\n";
 	
@@ -51,8 +121,8 @@ void zad2_3()
 
 void zad2_4()
 {
-	//2.4. Pobraï¿½ od uï¿½ytkownika liczbï¿½ x. Jeï¿½li liczba jest niedodatnia - naleï¿½y zakoï¿½czyï¿½ program. Nastï¿½pnie naleï¿½y wyï¿½wietlaï¿½ kolejno (w
-	//nowej linii) wszystkie liczby mniejsze od x, aï¿½ osiï¿½gniï¿½te zostanie 0.
+	//2.4. Pobra? od u?ytkownika liczb? x. Je?li liczba jest niedodatnia - nale?y zako?czy? program. Nast?pnie nale?y wy?wietla? kolejno (w
+	//nowej linii) wszystkie liczby mniejsze od x, a? osi?gni?te zostanie 0.
 	
 	cout<<endl<<"zad 2.4\n";
 	
@@ -77,9 +147,9 @@ void zad2_4()
 
 void zad2_5()
 {
-	/*2.5. Zapoznaï¿½ siï¿½ z instrukcjami continue; i break;. Pierwsza sï¿½uï¿½y do zakoï¿½czenia iteracji i przejï¿½cia do nastï¿½pnej, a druga natychmiast
-	koï¿½czy pï¿½tlï¿½. Przerobiï¿½ program z zadania 1.4, aby wyï¿½wietlaï¿½ tylko parzyste liczby (uï¿½yï¿½ if oraz continue). Jeï¿½li liczba wynosi 40, naleï¿½y
-	wyjï¿½ï¿½ z pï¿½tli i zakoï¿½czyï¿½ program. */
+	/*2.5. Zapozna? si? z instrukcjami continue; i break;. Pierwsza s?u?y do zako?czenia iteracji i przej?cia do nast?pnej, a druga natychmiast
+	ko?czy p?tl?. Przerobi? program z zadania 1.4, aby wy?wietla? tylko parzyste liczby (u?y? if oraz continue). Je?li liczba wynosi 40, nale?y
+	wyj?? z p?tli i zako?czy? program. */
 	
 	cout<<endl<<"zad 2.5\n";
 	
@@ -112,11 +182,11 @@ void zad2_5()
 
 void zad2_6()
 {
-	/*2.6. Zapoznaï¿½ siï¿½ z pï¿½tlï¿½ for. Pï¿½tla sï¿½uï¿½y do wykonania danego fragmentu kodu ZNANï¿½ Z Gï¿½RY okreï¿½lonï¿½ iloï¿½ï¿½ razy. Uwaga - kaï¿½dï¿½ pï¿½tlï¿½
-	for moï¿½na zastï¿½piï¿½ pï¿½tlï¿½ while i wzajemnie. Zwyczajowo obowiazuje zasada, ï¿½e jeï¿½li iloï¿½ï¿½ iteracji jest znana - uï¿½ywamy for, a jeï¿½li nie jest
-	znana (zaleï¿½y od uï¿½ytkownika lub jakiegoï¿½ stanu zewnï¿½trznego) - uï¿½ywamy pï¿½tli while. Pï¿½tla for skï¿½ada siï¿½ z: ZMIENNEJ ITERACYJNEJ,
-	czyli stanu poczï¿½tkowego pï¿½tli, np. int i = 0. Nastï¿½pnie WARUNKU ZAKOï¿½CZENIA Pï¿½TLI, np. i<10. Nastï¿½pnie OPERACJI WYKONYWANEJ
-	PO KAï¿½DEJ ITERACJI - zazwyczaj jest to zwiï¿½kszenie iteratora o 1, czyli i = i + 1, bï¿½dï¿½ w skrï¿½cie i++. Napisaï¿½ pï¿½tlï¿½ for, ktï¿½ra wyï¿½wietli cyfry
+	/*2.6. Zapozna? si? z p?tl? for. P?tla s?u?y do wykonania danego fragmentu kodu ZNAN? Z G?RY okre?lon? ilo?? razy. Uwaga - ka?d? p?tl?
+	for mo?na zast?pi? p?tl? while i wzajemnie. Zwyczajowo obowiazuje zasada, ?e je?li ilo?? iteracji jest znana - u?ywamy for, a je?li nie jest
+	znana (zale?y od u?ytkownika lub jakiego? stanu zewn?trznego) - u?ywamy p?tli while. P?tla for sk?ada si? z: ZMIENNEJ ITERACYJNEJ,
+	czyli stanu pocz?tkowego p?tli, np. int i = 0. Nast?pnie WARUNKU ZAKO?CZENIA P?TLI, np. i<10. Nast?pnie OPERACJI WYKONYWANEJ
+	PO KA?DEJ ITERACJI - zazwyczaj jest to zwi?kszenie iteratora o 1, czyli i = i + 1, b?d? w skr?cie i++. Napisa? p?tl? for, kt?ra wy?wietli cyfry
 	od 0 do 9. */
 	
 	cout<<endl<<"zad 2.6\n";
@@ -131,8 +201,8 @@ void zad2_6()
 
 void zad2_7()
 {
-	/* 2.7. Pobraï¿½ od uï¿½ytkownika liczby x i y. Zakï¿½adamy, ï¿½e y > x (zawsze, nie musimy tego sprawdzaï¿½). Za pomocï¿½ pï¿½tli for wypisaï¿½ liczby
-	miï¿½dzy x a y (do przemyï¿½lenia - co jest stanem poczï¿½tkowym, a co warunkiem zakoï¿½czenia pï¿½tli?) */
+	/* 2.7. Pobra? od u?ytkownika liczby x i y. Zak?adamy, ?e y > x (zawsze, nie musimy tego sprawdza?). Za pomoc? p?tli for wypisa? liczby
+	mi?dzy x a y (do przemy?lenia - co jest stanem pocz?tkowym, a co warunkiem zako?czenia p?tli?) */
 	
 	cout<<endl<<"zad 2.7\n";
 	
@@ -156,7 +226,7 @@ void zad2_7()
 void zad2_8()
 {
 	
-	/* 2.8. Pobraï¿½ od uï¿½ytkownika liczbï¿½ x. Za pomocï¿½ pï¿½tli for wypisaï¿½ wszystkie liczby mniejsze od x, ale wiï¿½ksze niï¿½ 0. */
+	/* 2.8. Pobra? od u?ytkownika liczb? x. Za pomoc? p?tli for wypisa? wszystkie liczby mniejsze od x, ale wi?ksze ni? 0. */
 	
 	cout<<endl<<"zad 2.8\n";
 	
@@ -178,8 +248,8 @@ void zad2_8()
 void zad2_9()
 {
 	
-	/* 2.9. Pobraï¿½ od uï¿½ytkownika liczbï¿½ x. Za pomocï¿½ pï¿½tli for wypisywaï¿½ CO TRZECIï¿½ liczbï¿½ wiï¿½kszï¿½ od x. Pï¿½tla powinna siï¿½ zakoï¿½czyï¿½, jeï¿½li
-	liczba przekroczy 100. Uwaga - proszï¿½ nie uï¿½ywaï¿½ operacji continue i break, a sterowaï¿½ tylko parametrami pï¿½tli. */
+	/* 2.9. Pobra? od u?ytkownika liczb? x. Za pomoc? p?tli for wypisywa? CO TRZECI? liczb? wi?ksz? od x. P?tla powinna si? zako?czy?, je?li
+	liczba przekroczy 100. Uwaga - prosz? nie u?ywa? operacji continue i break, a sterowa? tylko parametrami p?tli. */
 
 	cout<<endl<<"zad 2.9\n";
 	
@@ -202,7 +272,7 @@ void zad2_9()
 
 void NewLine()
 {
-	// 3.1. Napisaï¿½ metodï¿½ void NewLine(). Powinna ona wypisaï¿½ na ekran pojedynczï¿½ pustï¿½ liniï¿½. Uï¿½yï¿½ tej metodï¿½ w main().
+	// 3.1. Napisa? metod? void NewLine(). Powinna ona wypisa? na ekran pojedyncz? pust? lini?. U?y? tej metod? w main().
 	
 	cout<<endl;
 	
@@ -210,8 +280,8 @@ void NewLine()
 
 void NewLines(int count)
 {
-	/*3.2. Napisaï¿½ metodï¿½ void NewLines(int count). Powinna ona wypisaï¿½ tyle nowych linii, ile zostaï¿½o podanych W PARAMETRZE count (naleï¿½y
-	uï¿½yï¿½ pï¿½tli for). Uï¿½yï¿½ metodï¿½ w main() */
+	/*3.2. Napisa? metod? void NewLines(int count). Powinna ona wypisa? tyle nowych linii, ile zosta?o podanych W PARAMETRZE count (nale?y
+	u?y? p?tli for). U?y? metod? w main() */
 	
 	for(int i=1;i<=count;i++)
 	{
@@ -229,8 +299,8 @@ void WriteBiggerNumber(int x, int y)
 
 int Multiply(int x, int y)
 {
-	/*3.4. Napisaï¿½ metodï¿½ Multiply(int x, int y) . Metoda powinna ZWRï¿½CIï¿½ (sï¿½owo kluczowe return) iloczyn dwï¿½ch parametrï¿½w. Uwaga! Metoda
-	NIE POWINNA wypisywaï¿½ wyniku - powinien on byï¿½ wyï¿½wietlony w funkcji main! */
+	/*3.4. Napisa? metod? Multiply(int x, int y) . Metoda powinna ZWR?CI? (s?owo kluczowe return) iloczyn dw?ch parametr?w. Uwaga! Metoda
+	NIE POWINNA wypisywa? wyniku - powinien on by? wy?wietlony w funkcji main! */
 	
 	return x*y;
 }
@@ -238,6 +308,8 @@ int Multiply(int x, int y)
 int main()
 {
     zad2_1();
+    
+    zad2_2();
 
     zad2_3();
 
