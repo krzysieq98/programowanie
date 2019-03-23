@@ -1,0 +1,3 @@
+"E:\CLion 2018.3.4\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\zad_1_stod.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\zad_1_stod.dir/objects.a @CMakeFiles\zad_1_stod.dir\objects1.rsp
+C:\MinGW\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\zad_1_stod.dir/objects.a -Wl,--no-whole-archive  -o zad_1_stod.exe -Wl,--out-implib,libzad_1_stod.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\zad_1_stod.dir\linklibs.rsp
