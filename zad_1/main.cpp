@@ -45,6 +45,8 @@ string ConvertFromSymbolic(string input)
 
 int main()
 {
-    cout << ConvertFromSymbolic("22344Oc");
+    cout << ConvertFromSymbolic("4M") << endl;
+    cout << ConvertFromSymbolic("54T") << endl;
+    cout << ConvertFromSymbolic("5.434B") << endl;
     return 0;
 }
