@@ -47,24 +47,13 @@ RM = "E:\CLion 2018.3.4\bin\cmake\win\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\Programowanie\zad_1
+CMAKE_SOURCE_DIR = D:\zad_2.01
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\Programowanie\zad_1\cmake-build-debug
+CMAKE_BINARY_DIR = D:\zad_2.01\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"E:\CLion 2018.3.4\bin\cmake\win\bin\cmake.exe" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -77,11 +66,22 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	"E:\CLion 2018.3.4\bin\cmake\win\bin\cmake.exe" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Programowanie\zad_1\cmake-build-debug\CMakeFiles D:\Programowanie\zad_1\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\zad_2.01\cmake-build-debug\CMakeFiles D:\zad_2.01\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Programowanie\zad_1\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\zad_2.01\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -110,17 +110,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named zad_1_stod
+# Target rules for targets named zad_2_01
 
 # Build rule for target.
-zad_1_stod: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 zad_1_stod
-.PHONY : zad_1_stod
+zad_2_01: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 zad_2_01
+.PHONY : zad_2_01
 
 # fast build rule for target.
-zad_1_stod/fast:
-	$(MAKE) -f CMakeFiles\zad_1_stod.dir\build.make CMakeFiles/zad_1_stod.dir/build
-.PHONY : zad_1_stod/fast
+zad_2_01/fast:
+	$(MAKE) -f CMakeFiles\zad_2_01.dir\build.make CMakeFiles/zad_2_01.dir/build
+.PHONY : zad_2_01/fast
 
 main.obj: main.cpp.obj
 
@@ -128,7 +128,7 @@ main.obj: main.cpp.obj
 
 # target to build an object file
 main.cpp.obj:
-	$(MAKE) -f CMakeFiles\zad_1_stod.dir\build.make CMakeFiles/zad_1_stod.dir/main.cpp.obj
+	$(MAKE) -f CMakeFiles\zad_2_01.dir\build.make CMakeFiles/zad_2_01.dir/main.cpp.obj
 .PHONY : main.cpp.obj
 
 main.i: main.cpp.i
@@ -137,7 +137,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles\zad_1_stod.dir\build.make CMakeFiles/zad_1_stod.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles\zad_2_01.dir\build.make CMakeFiles/zad_2_01.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -146,7 +146,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles\zad_1_stod.dir\build.make CMakeFiles/zad_1_stod.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles\zad_2_01.dir\build.make CMakeFiles/zad_2_01.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -155,9 +155,9 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
-	@echo ... rebuild_cache
-	@echo ... zad_1_stod
+	@echo ... zad_2_01
 	@echo ... edit_cache
+	@echo ... rebuild_cache
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

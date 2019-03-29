@@ -127,5 +127,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/zad_1_stod.dir/DependInfo.cmake"
+  "CMakeFiles/zad_2_01.dir/DependInfo.cmake"
   )

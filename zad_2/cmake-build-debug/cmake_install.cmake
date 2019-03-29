@@ -1,8 +1,8 @@
-# Install script for directory: D:/Programowanie/zad_1
+# Install script for directory: D:/zad_2.01
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/zad_1_stod")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/zad_2_01")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/Programowanie/zad_1/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/zad_2.01/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
