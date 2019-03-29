@@ -53,14 +53,14 @@ private:
 
 int main()
 {
-    Convertion zmienna1;
-    cout << zmienna1.ConvertFromSymbolic("4M") << endl;
+    Convertion val1;
+    cout << val1.ConvertFromSymbolic("4M") << endl;
 
-    Convertion zmienna2;
-    cout << zmienna2.ConvertFromSymbolic("54T") << endl;
+    Convertion val2;
+    cout << val2.ConvertFromSymbolic("54T") << endl;
 
-    Convertion zmienna3;
-    cout << zmienna3.ConvertFromSymbolic("5.434B") << endl;
+    Convertion val3;
+    cout << val3.ConvertFromSymbolic("5.434B") << endl;
     return 0;
 }
 
