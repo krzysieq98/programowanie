@@ -7,7 +7,12 @@ class Convertion {
 
 public:
 
-    string ConvertFromSymbolic(string input)
+    string input;
+    Convertion(string input) {
+        this->input = input;
+    }
+
+    string ConvertFromSymbolic()
     {
         int comma = 0, afterComma = 0, multiplier[8] = {6,9,12,15,18,21,24,27};
         string letters, units[8] = {"M","B","T","Qa","Qi","Sx","Sp","Oc"};
@@ -53,14 +58,15 @@ private:
 
 int main()
 {
-    Convertion val1;
-    cout << val1.ConvertFromSymbolic("4M") << endl;
+    //string val_1 = "4M", val_2 = "54T", val_3 = "5.434B";
 
-    Convertion val2;
-    cout << val2.ConvertFromSymbolic("54T") << endl;
+    Convertion val1("4M");
+    cout << val1.ConvertFromSymbolic() << endl;
 
-    Convertion val3;
-    cout << val3.ConvertFromSymbolic("5.434B") << endl;
+    Convertion val2("54T");
+    cout << val2.ConvertFromSymbolic() << endl;
+
+    Convertion val3("5.434B");
+    cout << val3.ConvertFromSymbolic() << endl;
     return 0;
 }
-
